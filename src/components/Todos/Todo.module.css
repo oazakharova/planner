@@ -25,3 +25,12 @@
 .deleteIcon:hover {
   transform: scale(1.2);
 }
+
+.completedTodo {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.completedTodoIcon {
+  color: green;
+}
