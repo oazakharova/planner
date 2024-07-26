@@ -1,10 +1,11 @@
+import styles from './Todos.module.css';
 import Todo from './Todo';
 
 function Todos(props) {
   const { todos } = props;
 
   return (
-    <div>
+    <div className={styles.todos}>
       {todos.length > 0 ? (
         todos.map((todo) => <Todo key={todo.id} todo={todo} />)
       ) : (

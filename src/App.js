@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import './App.css';
-import background1 from './images/background1.png';
-import background2 from './images/background2.png';
+// import background1 from './images/background1.png';
+// import background2 from './images/background2.png';
 import TodoForm from './components/Todos/TodoForm';
 import Todos from './components/Todos/Todos';
 
