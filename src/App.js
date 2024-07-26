@@ -8,18 +8,22 @@ import TodoForm from './components/Todos/TodoForm';
 import Todos from './components/Todos/Todos';
 
 function App() {
-  const [todos, setTodo] = useState([]);
+  const [todos, setTodos] = useState([]);
 
   const addTodo = (text) => {
     const newTodo = { id: uuidv4(), text: text, isCompleted: false };
-    setTodo([...todos, newTodo]);
+    setTodos([...todos, newTodo]);
+  };
+
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   return (
     <div className="App">
       <h1>Daily planner</h1>
       <TodoForm addTodo={addTodo} />
-      <Todos todos={todos} />
+      <Todos todos={todos} deleteTodo={deleteTodo} />
     </div>
   );
 }
